@@ -43,4 +43,16 @@ public record Pos(
 ) implements Serializable { // serializable to allow cloning (see TestFixtures class).
     @Serial
     private static final long serialVersionUID = 1L;
+
+    //Static null checks
+    public Pos{
+        java.util.Objects.requireNonNull(name, "name is required");
+        java.util.Objects.requireNonNull(description, "description is required");
+        java.util.Objects.requireNonNull(type, "type is required");
+        java.util.Objects.requireNonNull(campus, "campus is required");
+        java.util.Objects.requireNonNull(street, "street is required");
+        java.util.Objects.requireNonNull(houseNumber, "houseNumber is required");
+        java.util.Objects.requireNonNull(postalCode, "postalCode is required");
+        java.util.Objects.requireNonNull(city, "city is required");
+    }
 }
