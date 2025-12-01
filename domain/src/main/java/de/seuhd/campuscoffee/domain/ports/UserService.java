@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface UserService {
     //TODO: Define user service interface
+    void clear();
     @NonNull List<User> getAll();
     @NonNull User getById(@NonNull Long id);
     @NonNull User getByloginName(@NonNull String loginName);

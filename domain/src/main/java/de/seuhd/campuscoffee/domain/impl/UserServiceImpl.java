@@ -22,6 +22,12 @@ public class UserServiceImpl implements UserService {
     private final UserDataService userDataService;
 
     @Override
+    public void clear() {
+        log.warn("Clearing all User data");
+        userDataService.clear();
+    }
+
+    @Override
     public @NonNull List<User> getAll() {
         log.debug("Retrieving all Users");
         return userDataService.getAll();
